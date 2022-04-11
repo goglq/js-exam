@@ -39,6 +39,19 @@ $(formAddCardId).submit((e) => {
   addCard(visitorId, bookId, new Date().toLocaleDateString(), undefined)
 })
 
+$('.btn-return').click(function (e) {
+  e.preventDefault()
+  const cardId = this.getAttribute('data-id')
+  returnBook(cardId)
+  window.location.reload()
+})
+
+function returnBook(cardId) {
+  const cardIndex = cards.findIndex((card) => card.id == cardId)
+  cards[cardIndex].returnDate = new Date().toLocaleDateString()
+  localStorage.setItem('cards', JSON.stringify(cards))
+}
+
 function addCard(visitorId, bookId, takeDate, returnDate) {
   cards.push(
     new VisitorCard(
@@ -64,7 +77,7 @@ function createCardItem(card) {
     <td>${
       card.returnDate !== undefined
         ? card.returnDate
-        : '<button>return</button>'
+        : `<button data-id="${card.id}" class="btn-return">return</button>`
     }</td>
   </tr>`
 
