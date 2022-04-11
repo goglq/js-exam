@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cards | Cards</title>
+    <link rel="stylesheet" href="../styles/global.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Cards</h1>
+        <nav>
+          <ul>
+            <li>
+              <a href="/">Books</a>
+            </li>
+            <li>
+              <a href="/visitors">Visitors</a>
+            </li>
+            <li>
+              <a href="/cards">Cards</a>
+            </li>
+            <li>
+              <a href="/statistics">Statistics</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <table id="cards-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Посетитель</th>
+            <th>Книга</th>
+            <th>Дата одолжения</th>
+            <th>Дата возвращения</th>
+          </tr>
+        </thead>
+        <tbody id="card-list"></tbody>
+      </table>
+      <button id="btn-open-add-form">Добавить карточку</button>
+    </div>
+    <form id="form-add-card">
+      <button id="btn-close-form">X</button>
+      <label for="input-visior">ID посетителя</label>
+      <select id="input-visitor"></select>
+      <label for="input-book">ID книги</label>
+      <select id="input-book"></select>
+      <button>Добавить</button>
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>

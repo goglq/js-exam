@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <link rel="stylesheet" href="styles/global.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Library</h1>
+        <nav>
+          <ul>
+            <li>
+              <a href="/">Books</a>
+            </li>
+            <li>
+              <a href="/visitors">Visitors</a>
+            </li>
+            <li>
+              <a href="/cards">Cards</a>
+            </li>
+            <li>
+              <a href="/statistics">Statistics</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <table id="book-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Название</th>
+            <th>Автор</th>
+            <th>Год</th>
+            <th>Издатель</th>
+            <th>Количество</th>
+            <th>Управление</th>
+          </tr>
+        </thead>
+        <tbody id="book-list"></tbody>
+      </table>
+      <button id="btn-open-add-form">Добавить книгу</button>
+    </div>
+    <form id="form-add-book">
+      <button id="btn-close-form">X</button>
+      <label for="input-title">Название</label>
+      <input id="input-title" type="text" />
+      <label for="input-author">Автор</label>
+      <input id="input-author" type="text" />
+      <label for="input-publisher">Издатель</label>
+      <input id="input-publisher" type="text" />
+      <label for="input-count">Количество</label>
+      <input id="input-count" type="text" />
+      <label for="input-year">Год</label>
+      <input id="input-year" type="text" />
+      <button>Добавить</button>
+    </form>
+    <script type="module" src="./initialize.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>

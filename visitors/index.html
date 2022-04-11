@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library | Visitors</title>
+    <link rel="stylesheet" href="../styles/global.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Visitors</h1>
+        <nav>
+          <ul>
+            <li>
+              <a href="/">Books</a>
+            </li>
+            <li>
+              <a href="/visitors">Visitors</a>
+            </li>
+            <li>
+              <a href="/cards">Cards</a>
+            </li>
+            <li>
+              <a href="/statistics">Statistics</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <table id="visitor-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Имя</th>
+            <th>Телефон</th>
+            <th>Редактировать</th>
+          </tr>
+        </thead>
+        <tbody id="visitor-list"></tbody>
+      </table>
+      <button id="btn-open-add-form">Добавить посетителя</button>
+    </div>
+    <form id="form-add-visitor">
+      <button id="btn-close-form">X</button>
+      <label for="input-name">Имя</label>
+      <input id="input-name" type="text" />
+      <label for="input-phone">Телефон</label>
+      <input id="input-phone" type="text" />
+      <button>Добавить</button>
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
